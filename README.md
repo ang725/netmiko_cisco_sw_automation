@@ -57,24 +57,24 @@ The script connects from the automation PC to each access switch by establishing
 
 In short: the JSON file defines what each switch should look like, and the Python script makes it happen automatically.  
 
----
+---  
 
 ### Running the Project  
 
 1. **Clone project repo**  
       ```bash  
       git clone https://github.com/ang725/netmiko_cisco_sw_automation.git  
-      cd your-repo-name  
+      cd netmiko_cisco_sw_automation  
       ```  
-2. **Clone ntc-templates repo & set environment variable**  
+2. **Install dependencies**  
       ```bash  
-      git clone https://github.com/networktocode/ntc-templates.git  
+      pip install -r requirements.txt  
+      ```  
+3. **Set up ntc-templates environment variable**  
+      ```bash   
       export NET_TEXTFSM='/path/to/ntc-templates/templates'  
       ```  
-3. **Install dependencies**  
-      ```bash  
-      pip install netmiko  
-      ```  
+      Replace /path/to/ntc-templates/templates with the actual path after pip installs the repo into your environment.  
 4. **Update 'access_switch_conf.json' with your switch details**  
 5. **Run the script**  
       ```bash  
