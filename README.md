@@ -74,7 +74,7 @@ In short: the JSON file defines what each switch should look like, and the Pytho
       ```bash   
       export NET_TEXTFSM='/path/to/ntc-templates/templates'  
       ```  
-      Replace /path/to/ntc-templates/templates with the actual path after pip installs the repo into your environment.  
+      Replace '/path/to/ntc-templates/templates' with the actual path after pip installs the repo into your environment.  
 4. **Update 'access_switch_conf.json' with your switch details**  
 5. **Run the script**  
       ```bash  
