@@ -1,7 +1,7 @@
  
-### Cisco Switch Automation with Netmiko
+## Cisco Switch Automation with Netmiko
 
-#### Project Overview
+### Project Overview
 
 The goal of this lab was to use automation to perform initial configuration on three “day 0” Cisco access switches. These switches were preconfigured with only the essentials: hostnames, SVIs, and the required settings for SSH access.  
 
@@ -21,7 +21,7 @@ This lab was intentionally simple to keep the focus on the automation script. Wh
 
 ---
 
-#### Tools & Technologies  
+### Tools & Technologies  
 
 - Programming: Python  
 - Libraries: Netmiko, JSON  
@@ -31,13 +31,13 @@ This lab was intentionally simple to keep the focus on the automation script. Wh
 
 ---
 
-#### Topology
+### Topology
 
 <img width="925" height="649" alt="topology" src="https://github.com/user-attachments/assets/6b657658-42b9-431b-b013-849c64a0e69d" />
 
 ----
 
-#### How It Works  
+### How It Works  
 
 - The lab network was built in GNS3, running on VMware Workstation Pro.  
 
@@ -59,31 +59,31 @@ In short: the JSON file defines what each switch should look like, and the Pytho
 
 ---
 
-#### Running the Project  
+### Running the Project  
 
 1. **Clone project repo**  
-   ```bash  
+      ```bash  
       git clone https://github.com/ang725/netmiko_cisco_sw_automation.git  
       cd your-repo-name  
-   ```  
+      ```  
 2. **Clone ntc-templates repo & set environment variable**  
-  ```bash  
+      ```bash  
       git clone https://github.com/networktocode/ntc-templates.git  
       export NET_TEXTFSM='/path/to/ntc-templates/templates'  
-  ```  
+      ```  
 3. **Install dependencies**  
-   ```bash  
-       pip install netmiko  
-   ```  
+      ```bash  
+      pip install netmiko  
+      ```  
 4. **Update 'access_switch_conf.json' with your switch details**  
 5. **Run the script**  
-  ```bash  
+      ```bash  
       python3 netmiko_script.py  
-  ```  
+      ```  
 
 ---  
 
-#### Why I Built It This Way  
+### Why I Built It This Way  
 
 I chose to structure the code in a Python class because:  
 
@@ -95,7 +95,7 @@ Because of the simplicity of the lab, I kept everything in a single file. Breaki
 
 ---
 
-#### Takeaways  
+### Takeaways  
 
 This project was written completely from scratch. No tutorials, just my own approach to solving the lab scenario. I wanted to see how I would structure and execute automation on my own.  
 
