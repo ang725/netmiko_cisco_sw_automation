@@ -35,7 +35,7 @@ This lab was intentionally simple to keep the focus on the automation script. Wh
 
 <img width="1063" height="694" alt="topology" src="https://github.com/user-attachments/assets/9644305e-2f94-4884-8830-bb0b83da3105" />
 
-----
+---
 
 ### How It Works  
 
@@ -56,6 +56,22 @@ The script connects from the automation PC to each access switch by establishing
 4. Displays console output in real time so the user can follow the configurations  
 
 In short: the JSON file defines what each switch should look like, and the Python script makes it happen automatically.  
+
+---
+
+### Repo Contents
+
+- `README.md` - documentation for the project  
+- `netmiko_cisco_sw_automation.py` - main Python script that connects to switches and pushes configs  
+- `access_switch_info.json` - JSON file defining device details and config parameters  
+- `requirements.txt` - Python dependencies for easy installation  
+- `topology.md` - network topology diagram used in the lab
+- `network_confs/` - initial configuration files for all network devices
+    - `dist_core_sw.txt`
+    - `r1_config.txt`
+    - `s2.txt`
+    - `s3.txt`
+    - `s4.txt`  
 
 ---  
 
@@ -80,6 +96,21 @@ In short: the JSON file defines what each switch should look like, and the Pytho
       ```bash  
       python3 netmiko_cisco_sw_automation.py  
       ```  
+---
+
+### Network Reachability  
+
+Note: Your automation host (PC/laptop/server) must have IP connectivity to the switches.  
+
+- If your host is in the **same subnet** as the switch management VLAN than no extra steps are needed.  
+- If your host is in a **different subnet**:    
+    - Either configure a **default gateway** on your host  
+    - Or add **static routes** to reach the switch subnets.  
+
+Example:  
+```bash  
+sudo ip route add 192.168.100.0/24 via 192.168.1.1
+```  
 
 ---  
 
