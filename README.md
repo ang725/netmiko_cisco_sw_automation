@@ -78,7 +78,7 @@ In short: the JSON file defines what each switch should look like, and the Pytho
 4. **Update 'access_switch_conf.json' with your switch details**  
 5. **Run the script**  
       ```bash  
-      python3 netmiko_script.py  
+      python3 netmiko_cisco_sw_automation.py  
       ```  
 
 ---  
