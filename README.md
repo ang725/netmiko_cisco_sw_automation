@@ -61,17 +61,17 @@ In short: the JSON file defines what each switch should look like, and the Pytho
 
 ### Repo Contents
 
-- `README.md` - documentation for the project  
-- `netmiko_cisco_sw_automation.py` - main Python script that connects to switches and pushes configs  
-- `access_switch_info.json` - JSON file defining device details and config parameters  
-- `requirements.txt` - Python dependencies for easy installation  
-- `topology.md` - network topology diagram used in the lab
-- `network_confs/` - initial configuration files for all network devices
-    - `dist_core_sw.txt`
-    - `r1_config.txt`
-    - `s2.txt`
-    - `s3.txt`
-    - `s4.txt`  
+- `README.md` — Project documentation and instructions  
+- `netmiko_cisco_sw_automation.py` — Main automation script  
+- `access_switch_info.json` — Configuration parameters per device  
+- `requirements.txt` — Required Python dependencies  
+- `topology.png` — Diagram of lab topology  
+- `network_confs/` — Directory containing initial configs:  
+  - `dist_core_sw.txt`  
+  - `r1_config.txt`  
+  - `s2.txt`  
+  - `s3.txt`  
+  - `s4.txt` 
 
 ---  
 
