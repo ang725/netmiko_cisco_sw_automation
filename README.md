@@ -33,7 +33,7 @@ This lab was intentionally simple to keep the focus on the automation script. Wh
 
 ### Topology
 
-<img width="925" height="649" alt="topology" src="https://github.com/user-attachments/assets/6b657658-42b9-431b-b013-849c64a0e69d" />
+<img width="1063" height="694" alt="topology" src="https://github.com/user-attachments/assets/9644305e-2f94-4884-8830-bb0b83da3105" />
 
 ----
 
