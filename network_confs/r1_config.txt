@@ -1,0 +1,77 @@
+R1:
+
+en
+conf t
+hostname R1
+ip domain-name example.com
+username admin privilege 15 password 0 cisco
+enable password cisco
+crypto key generate rsa modulus 1024
+
+ip ssh version 2
+
+ip access-list standard R1_SSH_ACCESS
+permit 192.168.200.136 0.0.0.255
+
+int loopback 0
+ip add 1.1.1.1 255.255.255.255
+
+int f 0/0
+ip add 192.168.200.138 255.255.255.0
+no shut
+
+int f 0/1
+no shut
+
+int f 0/1.100
+encapsulation dot1q 100
+ip add 192.168.100.2 255.255.255.0
+no shut
+
+int f 0/1.20
+encapsulation dot1q 20
+ip add 192.168.20.1 255.255.255.0
+no shut
+
+int f 0/1.30
+encapsulation dot1q 30
+ip add 192.168.30.1 255.255.255.0
+no shut
+
+int f 0/1.40
+encapsulation dot1q 40
+ip add 192.168.40.1 255.255.255.0
+no shut
+
+exit
+
+ip dhcp excluded-address 192.168.20.1 192.168.20.10
+ip dhcp excluded-address 192.168.30.1 192.168.30.10
+ip dhcp excluded-address 192.168.40.1 192.168.40.10
+
+ip dhcp pool vlan 20
+network 192.168.20.0 255.255.255.0
+default-router 192.168.20.1
+exit
+
+ip dhcp pool vlan 30
+network 192.168.30.0 255.255.255.0
+default-router 192.168.30.1
+exit
+
+ip dhcp pool vlan 40
+network 192.168.40.0 255.255.255.0
+default-router 192.168.40.1
+exit
+
+line vty 0 4
+login local 
+logging sync
+transport input ssh
+access-class R1_SSH_ACCESS in
+
+line console 0
+logging sync
+
+end
+copy run start
