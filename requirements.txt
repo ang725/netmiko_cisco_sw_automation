@@ -1,0 +1,2 @@
+netmiko
+git+https://github.com/networktocode/ntc-templates.git
