@@ -3,7 +3,7 @@
 
 ### Project Overview
 
-The goal of this lab was to use automation to perform initial configuration on three “day 0” Cisco access switches. These switches were preconfigured with only the essentials: hostnames, SVIs, and the required settings for SSH access.  
+The goal of this lab was to use automation to perform configuration on three “day 0” Cisco access switches. These switches were preconfigured with only the essentials: hostnames, SVIs, and the required settings for SSH access.  
 
 The following configurations were automatically applied to each switch via a Python script:  
 
